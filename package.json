@@ -1,0 +1,22 @@
+{
+  "name": "24-prueba-uf1287",
+  "version": "1.0.0",
+  "description": "En este fichero se ve la decadente manera que tiene el alumno este de suspenderme los examenes por tonterias varias.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGHJaime/24-prueba-uf1287.git"
+  },
+  "author": "JGHJaime",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JGHJaime/24-prueba-uf1287/issues"
+  },
+  "homepage": "https://github.com/JGHJaime/24-prueba-uf1287#readme",
+  "dependencies": {
+    "save": "^2.9.0"
+  }
+}
