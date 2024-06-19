@@ -2,12 +2,20 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('/public'));
+app.use(express.static(__dirname + '/public'));
 
-app.get('/suma', (req, res) => {
-  
-  res.send('Suma')
-})
+app.get
+const sumar = (req, res) => {
+
+  var sumando1 = Number(req.query.Sumando1)
+  var sumando2 = Number(req.query.Sumando2)
+  var resultado = (sumando1 + sumando2)
+
+  res.send(`Suma: ${sumando1} + ${sumando2} = ${resultado}`)
+
+}
+app.get('/suma', sumar)
+
 app.get('/hola', (req, res) => {
   
   res.send('Hello World!')
