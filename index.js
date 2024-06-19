@@ -4,7 +4,6 @@ const port = 3000
 
 app.use(express.static(__dirname + '/public'));
 
-app.get
 const sumar = (req, res) => {
 
   var sumando1 = Number(req.query.Sumando1)
@@ -14,19 +13,26 @@ const sumar = (req, res) => {
   res.send(`Suma: ${sumando1} + ${sumando2} = ${resultado}`)
 
 }
-app.get('/suma', sumar)
+app.get('/suma', sumar);
 
-app.get('/hola', (req, res) => {
-  
-  res.send('Hello World!')
-})
-app.get('/multiplicacion', (req, res) => {
-  
-  res.send('multiplica!')
-})
-app.get('/lista-de-1', (req, res) => {
-  
-  res.send('lista')
+const multiplicar = (req, res) => {
+
+  var multi1 = Number(req.query.Sumando1)
+  var multi2 = Number(req.query.Sumando2)
+  var resultado = (multi1 * multi2)
+
+  res.send(`Multiplicar: ${multi1} * ${multi2} = ${resultado}`)
+
+}
+app.get('/multiplicacion', multiplicar);
+
+app.get('/listade1',(req, res) =>{
+  var a = Number(req.query.a)
+  var lista = []
+    for(i = 1; i <= a; i++){
+      lista.push(i)
+    }
+    res.send(`${lista}`)
 })
 
 app.listen(port, () => {
